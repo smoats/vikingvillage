@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{04945622-4059-4cbe-af08-1f0d5cdbedbe}">
 		<property name="assetPath">
-			<value>Fire, Crackle, Heavy Crackling, Windy Large Flame, Sizzling Fire SND42937.wav</value>
+			<value>ENVIRONMENT/Fire, Crackle, Heavy Crackling, Windy Large Flame, Sizzling Fire SND42937.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

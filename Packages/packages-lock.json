@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.atmoky.truespatial-fmod": {
-      "version": "file:C:/Users/tomas/Downloads/atmokyTrueSpatial_FMOD_v2.1.4/atmokyTrueSpatial_FMOD_v2.1.4/atmokyTrueSpatial_FMOD_v2.1.4_UnityIntegration/atmokyTrueSpatial_FMOD_v2.1.4_UnityIntegration/com.atmoky.truespatial-fmod-2.1.4.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {}
-    },
     "com.unity.burst": {
       "version": "1.8.18",
       "depth": 0,
