@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{5d15e44d-4345-45d3-ac9c-04c1b6241444}">
+		<property name="assetPath">
+			<value>Footsteps, Human, Sneakers, Dirt, Walk, Close SND127918.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.54470833333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6fb4392d-630e-48bc-9022-5b0edffeec05}</destination>
+		</relationship>
+	</object>
+</objects>
