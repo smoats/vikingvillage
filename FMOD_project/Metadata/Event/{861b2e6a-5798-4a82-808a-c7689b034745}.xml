@@ -56,7 +56,11 @@
 			<destination>{069576d9-66a1-4d09-a36a-45b174a39fc4}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{6d2b4f22-0036-4a41-92d5-abbd5ee095ed}" />
+	<object class="EventAutomatableProperties" id="{6d2b4f22-0036-4a41-92d5-abbd5ee095ed}">
+		<property name="maximumDistance">
+			<value>100</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{94e6c97d-6b5e-4708-8583-d9aebea8084b}" />
 	<object class="GroupTrack" id="{8186365c-01f4-4b5b-8c75-c6bf39458eeb}">
 		<relationship name="modules">
@@ -257,7 +261,7 @@
 			<value>ApplyOccl</value>
 		</property>
 		<property name="value">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -351,7 +355,7 @@
 			<value>DAMaxDist</value>
 		</property>
 		<property name="value">
-			<value>20</value>
+			<value>4750</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,10000.000000)}</value>
@@ -428,7 +432,7 @@
 			<value>Occlusion</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0.239999995</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -464,7 +468,7 @@
 			<value>TransMid</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0.584999979</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -475,7 +479,7 @@
 			<value>TransHigh</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0.474999994</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -497,7 +501,7 @@
 			<value>ReflBinaural</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{848c3ba1-1d64-4794-a595-442373027d37}">
@@ -516,7 +520,7 @@
 			<value>PathBinaural</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{54bea599-d7f2-41ba-a433-bc3240619119}">

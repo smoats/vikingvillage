@@ -24,7 +24,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
-  maxOcclusionSamples: 16
+  maxOcclusionSamples: 80
   realTimeRays: 4096
   realTimeBounces: 4
   realTimeDuration: 1
