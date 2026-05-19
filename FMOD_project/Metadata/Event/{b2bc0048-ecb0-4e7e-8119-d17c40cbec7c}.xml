@@ -34,6 +34,9 @@
 		<relationship name="timeline">
 			<destination>{31df4e51-34c9-4841-8a93-01fdf12485df}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{ccf8ac0a-6d58-48a4-8c45-a1b514df09b7}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{94480f77-0e45-4c2a-9990-ab1f7ae915c4}</destination>
 		</relationship>
@@ -59,7 +62,14 @@
 			<destination>{260f8275-6557-45db-a1c2-0efb4e9586eb}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{c59e43eb-88f0-4ebd-928a-38b6e3799fa2}" />
+	<object class="EventAutomatableProperties" id="{c59e43eb-88f0-4ebd-928a-38b6e3799fa2}">
+		<property name="maxVoices">
+			<value>1</value>
+		</property>
+		<property name="voiceStealing">
+			<value>3</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{d076a9a6-1e2c-4ea9-acf6-62bda7ea4587}" />
 	<object class="GroupTrack" id="{7c72732d-fb2a-421b-b6c7-d8b77cecad07}">
 		<relationship name="mixerGroup">
@@ -67,6 +77,11 @@
 		</relationship>
 	</object>
 	<object class="Timeline" id="{31df4e51-34c9-4841-8a93-01fdf12485df}" />
+	<object class="ParameterProxy" id="{ccf8ac0a-6d58-48a4-8c45-a1b514df09b7}">
+		<relationship name="preset">
+			<destination>{5738f79a-7c34-48d7-909a-80f9efb82677}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{08e0b8b5-e38f-4286-a217-3876f5fcef0f}">
 		<relationship name="effectChain">
 			<destination>{a41433cd-f153-422d-af19-62bcdbddec04}</destination>

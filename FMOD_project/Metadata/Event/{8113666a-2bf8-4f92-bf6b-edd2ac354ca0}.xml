@@ -60,6 +60,12 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{a12fd382-1fd6-4de1-8154-1089c9e8e680}">
+		<property name="maxVoices">
+			<value>3</value>
+		</property>
+		<property name="voiceStealing">
+			<value>2</value>
+		</property>
 		<property name="maximumDistance">
 			<value>100</value>
 		</property>
@@ -140,7 +146,7 @@
 	<object class="MixerBusEffectChain" id="{01f817fd-2d20-4114-a1df-c9b8a8c333f4}">
 		<relationship name="effects">
 			<destination>{8cb97009-9a5e-4bd3-8305-dac66e5523af}</destination>
-			<destination>{a576caf1-45b5-46a0-b4d4-40bb4c23edfb}</destination>
+			<destination>{3f65c5d8-4401-4998-b7d6-e02106d9404d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f5ec04f4-e1cb-4e05-b26d-0d664a0b3ef1}" />
@@ -152,12 +158,12 @@
 	</object>
 	<object class="MixerBusPanner" id="{2c113216-cdd3-4f5c-b263-5554687e7e56}" />
 	<object class="MixerBusFader" id="{8cb97009-9a5e-4bd3-8305-dac66e5523af}" />
-	<object class="ProxyEffect" id="{a576caf1-45b5-46a0-b4d4-40bb4c23edfb}">
+	<object class="ProxyEffect" id="{3f65c5d8-4401-4998-b7d6-e02106d9404d}">
 		<property name="inputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="preset">
-			<destination>{5d1bc6bf-9da8-44b0-92c1-93e3dd1aa542}</destination>
+			<destination>{002bfd8b-de50-4d65-9d95-ebd8bcbdc2db}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{4c2bc9c2-f6fb-4b6f-9eed-909fc05a6c34}" />

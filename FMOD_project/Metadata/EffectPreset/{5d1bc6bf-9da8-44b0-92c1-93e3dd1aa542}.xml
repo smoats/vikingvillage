@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="EffectPreset" id="{5d1bc6bf-9da8-44b0-92c1-93e3dd1aa542}">
 		<property name="name">
-			<value>General Spatializer</value>
+			<value>Spatializer_General</value>
 		</property>
 		<relationship name="folder">
 			<destination>{94924307-1f7c-4942-bdd3-b58ab61ca066}</destination>
@@ -158,7 +158,7 @@
 			<value>ApplyPath</value>
 		</property>
 		<property name="value">
-			<value>true</value>
+			<value>false</value>
 		</property>
 	</object>
 	<object class="IntPluginParameter" id="{043ae026-4119-4172-8431-2282cd4c4d6e}">
@@ -381,7 +381,7 @@
 			<value>PathBinaural</value>
 		</property>
 		<property name="value">
-			<value>true</value>
+			<value>false</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{5131f237-c5dc-4be7-86b5-303de7cca58a}">

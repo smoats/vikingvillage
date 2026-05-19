@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="ParameterPreset" id="{673a78f3-3839-4a18-978e-ef4eee578de7}">
 		<property name="name">
-			<value>Zone_Docks</value>
+			<value>Zone_Outside</value>
 		</property>
 		<relationship name="folder">
 			<destination>{d9aabb9c-2015-48e2-9c4f-42497f214989}</destination>
@@ -13,10 +13,14 @@
 	</object>
 	<object class="GameParameter" id="{33bb32bf-218b-4d2c-8df9-558ba563f17f}">
 		<property name="parameterType">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="maximum">
 			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Village</value>
+			<value>Docks</value>
 		</property>
 		<property name="isGlobal">
 			<value>true</value>

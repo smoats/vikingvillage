@@ -66,7 +66,14 @@
 			<destination>{1b080ded-c7a3-480f-81e8-9c3a6aebb85f}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{699b0ca0-d21a-4d35-b2b1-fbc2da8c1c2b}" />
+	<object class="EventAutomatableProperties" id="{699b0ca0-d21a-4d35-b2b1-fbc2da8c1c2b}">
+		<property name="maxVoices">
+			<value>3</value>
+		</property>
+		<property name="voiceStealing">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{32e1029f-e34a-4b03-904b-fec9301096d6}" />
 	<object class="GroupTrack" id="{455f89e1-fe37-44b2-9f31-ad04d9bd3be3}">
 		<relationship name="modules">
@@ -126,7 +133,7 @@
 			<value>6</value>
 		</property>
 		<property name="volume">
-			<value>-31</value>
+			<value>-14.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{04945622-4059-4cbe-af08-1f0d5cdbedbe}</destination>
@@ -182,7 +189,7 @@
 	<object class="MixerBusEffectChain" id="{8e2595e4-0ee2-41c6-8462-3fff62fad6b2}">
 		<relationship name="effects">
 			<destination>{15ce0f50-45b4-4884-9337-b9796c303150}</destination>
-			<destination>{d68c6dfa-b8bf-414d-af1d-834f18fd0fd9}</destination>
+			<destination>{4315fab2-a223-4975-9e1b-1b663abedeee}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{954f0688-9b65-4755-9644-23993331d03b}" />
@@ -227,12 +234,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{15ce0f50-45b4-4884-9337-b9796c303150}" />
-	<object class="ProxyEffect" id="{d68c6dfa-b8bf-414d-af1d-834f18fd0fd9}">
+	<object class="ProxyEffect" id="{4315fab2-a223-4975-9e1b-1b663abedeee}">
 		<property name="inputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="preset">
-			<destination>{5d1bc6bf-9da8-44b0-92c1-93e3dd1aa542}</destination>
+			<destination>{4a1243b0-5ff9-4bc2-bb16-f691c4395cb2}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationPoint" id="{f43660d3-362d-4cda-a871-4fa9becb924a}">
