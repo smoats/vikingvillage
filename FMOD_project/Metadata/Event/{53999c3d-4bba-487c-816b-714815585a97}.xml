@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{53999c3d-4bba-487c-816b-714815585a97}">
+		<property name="note">
+			<value>Player locomotion</value>
+		</property>
+		<property name="color">
+			<value>Purple</value>
+		</property>
 		<property name="name">
-			<value>plr_locomotion_fs</value>
+			<value>PLR_LOC_fs</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -36,7 +42,9 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{6d78b4bd-c3c6-49fd-bb5e-84a691d07625}</destination>
-			<destination>{38aa7d10-0ad4-4405-9243-b05acc657b09}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{94480f77-0e45-4c2a-9990-ab1f7ae915c4}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{22957e12-821d-4e83-aa5c-edf69b3cc9a1}">
@@ -45,9 +53,6 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{2b322868-a19b-4747-9957-8a57d75fc274}">
-		<relationship name="modules">
-			<destination>{8daf0889-140f-44c4-9066-2906b396fdd0}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{6eab827b-5121-4fbb-b501-ea340b958170}</destination>
 		</relationship>
@@ -60,7 +65,7 @@
 			<destination>{6ecd3bfd-ce13-4100-84b1-e71d3dafa2db}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{069576d9-66a1-4d09-a36a-45b174a39fc4}</destination>
+			<destination>{798564d3-c498-46c0-902d-8aed1c60a595}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{bf6b6bc2-7f54-4065-9f6b-31b1caee51a5}" />
@@ -117,18 +122,10 @@
 			<destination>{064a4ec8-5f00-461e-ac7b-8a0f497cf332}</destination>
 			<destination>{2f128fcc-1f9c-4876-b48c-a42704ea6bee}</destination>
 		</relationship>
-		<relationship name="markers">
-			<destination>{b0615f3b-bff2-433a-802a-48f195dd29ad}</destination>
-		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{6d78b4bd-c3c6-49fd-bb5e-84a691d07625}">
 		<relationship name="preset">
 			<destination>{c4116f18-e6c0-41e2-beaa-c22b17f100f8}</destination>
-		</relationship>
-	</object>
-	<object class="ActionSheet" id="{38aa7d10-0ad4-4405-9243-b05acc657b09}">
-		<relationship name="modules">
-			<destination>{8daf0889-140f-44c4-9066-2906b396fdd0}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{6eab827b-5121-4fbb-b501-ea340b958170}">
@@ -142,7 +139,6 @@
 			<destination>{22957e12-821d-4e83-aa5c-edf69b3cc9a1}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{8daf0889-140f-44c4-9066-2906b396fdd0}" />
 	<object class="MixerBusEffectChain" id="{45925ed4-5a1a-4726-9907-fc38e8a9c938}">
 		<relationship name="effects">
 			<destination>{32ebcfbb-8742-4221-a74c-fab189855aac}</destination>
@@ -281,20 +277,6 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{6eab827b-5121-4fbb-b501-ea340b958170}</destination>
-		</relationship>
-	</object>
-	<object class="LoopRegion" id="{b0615f3b-bff2-433a-802a-48f195dd29ad}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="length">
-			<value>0.51958333333333329</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{5df32706-ae0f-4b59-91d8-8571aa1fe1a0}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{56027fba-1381-42e8-bad0-8c5701e9abc8}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{0bbe8627-abb7-44be-b956-bdca8a9a182a}">

@@ -14738,12 +14738,12 @@ GameObject:
   - component: {fileID: 1546601809468743000}
   - component: {fileID: 7446508827854506437}
   m_Layer: 10
-  m_Name: FMOD_Object
+  m_Name: FMOD_Event
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8201481793520899399
 Transform:
   m_ObjectHideFlags: 0
@@ -14778,7 +14778,7 @@ MonoBehaviour:
       Data2: 1162695390
       Data3: 431364509
       Data4: -1091430247
-    Path: event:/ENVIRONMENT/env_torch_lp
+    Path: event:/AMBIENCE/Point Sources/Objects/AMB_PNT_torch_lp
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
@@ -14818,13 +14818,13 @@ MonoBehaviour:
   dipoleWeight: 0
   dipolePower: 0
   directivityValue: 1
-  occlusion: 0
+  occlusion: 1
   occlusionInput: 0
   occlusionType: 0
   occlusionRadius: 1
   occlusionSamples: 16
   occlusionValue: 1
-  transmission: 0
+  transmission: 1
   transmissionType: 0
   transmissionInput: 0
   transmissionLow: 1
@@ -14832,7 +14832,7 @@ MonoBehaviour:
   transmissionHigh: 1
   maxTransmissionSurfaces: 1
   directMixLevel: 1
-  reflections: 0
+  reflections: 1
   reflectionsType: 0
   useDistanceCurveForReflections: 0
   currentBakedSource: {fileID: 0}
