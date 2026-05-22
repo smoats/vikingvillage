@@ -73,7 +73,7 @@
 	<object class="MarkerTrack" id="{654b443a-1186-47f7-b516-e194a36b64d4}" />
 	<object class="GroupTrack" id="{f5616977-1d6e-4d88-b3a4-c4a6465728d9}">
 		<relationship name="modules">
-			<destination>{b289b1f4-f60c-4a36-8757-91912b11a5c9}</destination>
+			<destination>{0f20271a-9b1c-4c5b-a301-2bf49dd231c7}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{fc693903-5266-4d32-985d-46f96fd33887}</destination>
@@ -81,7 +81,7 @@
 	</object>
 	<object class="Timeline" id="{7785f814-cb36-4983-8066-b0a018a4c24f}">
 		<relationship name="modules">
-			<destination>{b289b1f4-f60c-4a36-8757-91912b11a5c9}</destination>
+			<destination>{0f20271a-9b1c-4c5b-a301-2bf49dd231c7}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{0d474310-ab15-47dd-8901-39e8c7bf0b87}</destination>
@@ -107,20 +107,20 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f6f124a2-8a7d-45c2-80e8-4277499ef96b}" />
-	<object class="SingleSound" id="{b289b1f4-f60c-4a36-8757-91912b11a5c9}">
+	<object class="SingleSound" id="{0f20271a-9b1c-4c5b-a301-2bf49dd231c7}">
 		<property name="length">
-			<value>179.9995625</value>
+			<value>102</value>
 		</property>
-		<property name="volume">
-			<value>10</value>
+		<property name="timelockedOffset">
+			<value>2</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{ba901541-8e20-4755-be6c-972f0f23c9a2}</destination>
+			<destination>{7aaacda6-82ed-4efe-bac8-5410d972a8f8}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{fc693903-5266-4d32-985d-46f96fd33887}">
 		<property name="volume">
-			<value>10</value>
+			<value>-27.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -140,7 +140,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>179.9995625</value>
+			<value>102</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{7785f814-cb36-4983-8066-b0a018a4c24f}</destination>

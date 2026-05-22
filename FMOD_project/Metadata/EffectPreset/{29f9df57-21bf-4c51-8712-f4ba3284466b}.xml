@@ -271,7 +271,7 @@
 			<value>DipoleWeight</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>0.00499999989</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
