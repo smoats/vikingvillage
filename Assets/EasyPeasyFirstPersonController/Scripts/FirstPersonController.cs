@@ -1,9 +1,14 @@
-namespace EasyPeasyFirstPersonController
+﻿namespace EasyPeasyFirstPersonController
 {
     using UnityEngine;
+    using FMODUnity;
 
     public partial class FirstPersonController : MonoBehaviour
     {
+        [Header("Audio (FMOD)")]
+        public EventReference footstepEvent;
+        public string surfaceParameterName = "fs_material";
+
         [Header("Settings")]
         public float walkSpeed = 3f;
         public float sprintSpeed = 5f;
@@ -25,6 +30,8 @@ namespace EasyPeasyFirstPersonController
         [HideInInspector] public IInputManager input;
         [HideInInspector] public Vector3 moveDirection;
         [HideInInspector] public bool isGrounded;
+
+        private int previousStepCount = 0;
 
         private PlayerBaseState currentState;
         private PlayerStateFactory states;
@@ -134,6 +141,59 @@ namespace EasyPeasyFirstPersonController
             playerCamera.localRotation = Quaternion.Euler(xRotation, 0, currentTilt);
         }
 
+        private int DetermineSurfaceType()
+        {
+            // 1. Prioritize water - if we are swimming/wading, return the water value
+            if (isInWater)
+                return 4;
+
+            // 2. Shoot a short raycast down from the groundCheck to see what we are standing on
+            if (Physics.Raycast(groundCheck.position, Vector3.down, out RaycastHit hit, 0.5f, groundMask))
+            {
+                // Check the Tag of the object we hit
+                switch (hit.collider.tag)
+                {
+                    case "Mud":
+                        Debug.Log("Mud");
+                        return 1;
+                    case "Grass":
+                        Debug.Log("Grass");
+                        return 2;
+                    case "Dirt":
+                        Debug.Log("Dirt");
+                        return 3;
+
+                    default:
+                        Debug.Log("Wood");
+                        return 0; // Default surface - Wood
+                }
+            }
+
+            return 0; // Fallback default
+        }
+
+        private void PlayFootstep()
+        {
+            if (!footstepEvent.IsNull)
+            {
+                // 1. Create an instance of the FMOD event
+                FMOD.Studio.EventInstance footstepInstance = FMODUnity.RuntimeManager.CreateInstance(footstepEvent);
+
+                // 2. Set the 3D position so it sounds like it's coming from the feet
+                footstepInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(groundCheck.position));
+
+                // 3. Determine the surface and pass it to FMOD
+                int surfaceIndex = DetermineSurfaceType();
+                footstepInstance.setParameterByName(surfaceParameterName, surfaceIndex);
+
+                // 4. Play the sound
+                footstepInstance.start();
+
+                // 5. CRUCIAL: Release the instance so it gets destroyed from memory after it finishes playing
+                footstepInstance.release();
+            }
+        }
+
         public void UpdateVisuals()
         {
             if (!useFovKick)
@@ -148,12 +208,22 @@ namespace EasyPeasyFirstPersonController
             if (useHeadBob && characterController.velocity.magnitude > 0.1f && isGrounded)
             {
                 bobTimer += Time.deltaTime * currentBobSpeed;
+
+                int currentStepCount = Mathf.FloorToInt(bobTimer / (Mathf.PI * 2f));
+
+                if (currentStepCount > previousStepCount)
+                {
+                    PlayFootstep();
+                    previousStepCount = currentStepCount;
+                }
+
                 float bobOffset = Mathf.Sin(bobTimer) * currentBobIntensity;
                 cameraParent.localPosition = new Vector3(cameraParent.localPosition.x, newY + bobOffset, cameraParent.localPosition.z);
             }
             else
             {
                 bobTimer = 0;
+                previousStepCount = 0;
                 cameraParent.localPosition = new Vector3(cameraParent.localPosition.x, newY, cameraParent.localPosition.z);
             }
         }

@@ -1,2 +1,3 @@
 *.tif filter=lfs diff=lfs merge=lfs -text
 *.hdr filter=lfs diff=lfs merge=lfs -text
+Assets/Viking[[:space:]]Village/Scenes/The_Viking_Village/LightingData.asset filter=lfs diff=lfs merge=lfs -text
