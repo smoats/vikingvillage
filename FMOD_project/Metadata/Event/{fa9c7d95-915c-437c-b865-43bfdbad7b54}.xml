@@ -73,7 +73,7 @@
 	<object class="MarkerTrack" id="{654b443a-1186-47f7-b516-e194a36b64d4}" />
 	<object class="GroupTrack" id="{f5616977-1d6e-4d88-b3a4-c4a6465728d9}">
 		<relationship name="modules">
-			<destination>{0f20271a-9b1c-4c5b-a301-2bf49dd231c7}</destination>
+			<destination>{02acf125-fc52-425d-8d01-2f180c9de72b}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{fc693903-5266-4d32-985d-46f96fd33887}</destination>
@@ -81,7 +81,7 @@
 	</object>
 	<object class="Timeline" id="{7785f814-cb36-4983-8066-b0a018a4c24f}">
 		<relationship name="modules">
-			<destination>{0f20271a-9b1c-4c5b-a301-2bf49dd231c7}</destination>
+			<destination>{02acf125-fc52-425d-8d01-2f180c9de72b}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{0d474310-ab15-47dd-8901-39e8c7bf0b87}</destination>
@@ -107,20 +107,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f6f124a2-8a7d-45c2-80e8-4277499ef96b}" />
-	<object class="SingleSound" id="{0f20271a-9b1c-4c5b-a301-2bf49dd231c7}">
+	<object class="SingleSound" id="{02acf125-fc52-425d-8d01-2f180c9de72b}">
 		<property name="length">
-			<value>102</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>2</value>
+			<value>193.20033333333333</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{7aaacda6-82ed-4efe-bac8-5410d972a8f8}</destination>
+			<destination>{4b8481fc-7d99-4ffd-93d0-bffc39bad613}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{fc693903-5266-4d32-985d-46f96fd33887}">
 		<property name="volume">
-			<value>-27.5</value>
+			<value>5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -140,7 +137,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>102</value>
+			<value>193.20033333333333</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{7785f814-cb36-4983-8066-b0a018a4c24f}</destination>
@@ -166,7 +163,7 @@
 	<object class="MixerBusFader" id="{a8a3efb9-e0cc-43c6-9cad-af65ff2a94da}" />
 	<object class="ProxyEffect" id="{bfe8022c-87eb-45c8-a794-697158d19d46}">
 		<property name="inputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="preset">
 			<destination>{5d1bc6bf-9da8-44b0-92c1-93e3dd1aa542}</destination>

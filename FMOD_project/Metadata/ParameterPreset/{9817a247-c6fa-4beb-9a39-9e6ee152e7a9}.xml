@@ -24,7 +24,7 @@
 			<value>Grass</value>
 			<value>Dirt</value>
 			<value>Stone</value>
-			<value>Wood 2</value>
+			<value>Wood_Hollow</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
