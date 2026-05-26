@@ -5,7 +5,7 @@
 			<value>Yellow</value>
 		</property>
 		<property name="name">
-			<value>AMB_PNT_BLD_tavern</value>
+			<value>AMB_BLD_tavern</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

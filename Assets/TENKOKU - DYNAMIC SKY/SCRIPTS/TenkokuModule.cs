@@ -4,6 +4,7 @@ using UnityEngine.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using FMODUnity;
 
 #if UNITY_EDITOR
 	using UnityEditor;
@@ -17,6 +18,12 @@ namespace Tenkoku.Core
 	[System.Serializable]
     public class TenkokuModule : MonoBehaviour
 	{
+
+		//FMOD
+		public string dayNightCycleParameter = "Time_Of_Day";
+		public string rainParameter = "Rain";
+
+		public float currentTimeFMOD;
 
 	//PUBLIC VARIABLES
 	public string tenkokuVersionNumber = "";
@@ -1020,7 +1027,14 @@ bool totalEclipse = false;
 
 	void LateUpdate () {
 
-	//if (Application.isPlaying){
+			//if (Application.isPlaying){
+
+			float secondNormalized = useSecond / 60f;
+			Debug.Log(useSecond);
+			Debug.Log(secondNormalized);
+			currentTimeFMOD = useHour + secondNormalized;
+
+			UpdateFMODParameters(currentTimeFMOD, weather_RainAmt);
 
 		//SET VERSION NUMBER
 		tenkokuVersionNumber = "1.2.2";
@@ -4223,6 +4237,12 @@ if (float.IsNaN(eclipseFactor)) eclipseFactor = 1f;
         return Mathf.Round(value * mult) / mult;
     }
 
+
+	void UpdateFMODParameters (float DayNightCycleParameter, float RainParameter)
+        {
+			RuntimeManager.StudioSystem.setParameterByName(dayNightCycleParameter, DayNightCycleParameter);
+			RuntimeManager.StudioSystem.setParameterByName(rainParameter, RainParameter);
+		}
 
 
 }
