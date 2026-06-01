@@ -1029,10 +1029,10 @@ bool totalEclipse = false;
 
 			//if (Application.isPlaying){
 
-			float secondNormalized = useSecond / 60f;
-			Debug.Log(useSecond);
-			Debug.Log(secondNormalized);
-			currentTimeFMOD = useHour + secondNormalized;
+			float minuteNormalized = currentMinute / 60f;
+			//Debug.Log(useSecond);
+			//Debug.Log(minuteNormalized);
+			currentTimeFMOD = useHour + minuteNormalized;
 
 			UpdateFMODParameters(currentTimeFMOD, weather_RainAmt);
 
