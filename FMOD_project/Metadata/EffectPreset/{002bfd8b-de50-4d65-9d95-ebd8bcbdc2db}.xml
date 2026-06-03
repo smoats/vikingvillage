@@ -12,6 +12,9 @@
 		</relationship>
 	</object>
 	<object class="PluginEffect" id="{e4cc2821-6cd0-4cea-af4b-ed8c60881460}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<relationship name="plugin">
 			<destination>{e34a1a24-fe4c-46f2-b32e-b92bb6f23355}</destination>
 		</relationship>
