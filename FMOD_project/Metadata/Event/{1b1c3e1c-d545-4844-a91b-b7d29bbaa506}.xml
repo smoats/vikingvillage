@@ -134,7 +134,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{cbec7610-31a6-472b-9bf2-632c119c6000}">
 		<property name="name">
-			<value>bird</value>
+			<value>Owl</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{cfb9a23e-eab9-4a63-a576-f6963ddb100e}</destination>
@@ -190,6 +190,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{303574ad-c550-4c7e-8cec-b0e9d18f1159}">
+		<property name="startOffset">
+			<value>26.5</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{b17672c9-7e33-4361-8c0a-425cefc36709}</destination>
 		</relationship>
@@ -207,6 +210,7 @@
 	<object class="MixerBusEffectChain" id="{cfb9a23e-eab9-4a63-a576-f6963ddb100e}">
 		<relationship name="effects">
 			<destination>{cce6f636-6b8d-4beb-9933-c8d2e577c92f}</destination>
+			<destination>{57e1489f-7da9-454e-8838-5b2dc0bc4d66}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{abd426ad-c527-4e9c-9d85-b597cbbb7f5a}" />
@@ -254,6 +258,14 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{cce6f636-6b8d-4beb-9933-c8d2e577c92f}" />
+	<object class="MultibandEqEffect" id="{57e1489f-7da9-454e-8838-5b2dc0bc4d66}">
+		<property name="frequencyA">
+			<value>2206.08374</value>
+		</property>
+		<property name="qualityA">
+			<value>0.612957776</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{d1a97c9c-2d3c-4b48-ac21-eecc61d63f8e}">
 		<property name="position">
 			<value>4.8634236453201964</value>

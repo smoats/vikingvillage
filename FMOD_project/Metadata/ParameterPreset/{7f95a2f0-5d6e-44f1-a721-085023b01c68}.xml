@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{7f95a2f0-5d6e-44f1-a721-085023b01c68}">
+		<property name="name">
+			<value>Insige</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d9aabb9c-2015-48e2-9c4f-42497f214989}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{91d2ea28-52dc-48e5-a42a-af291c7c90cb}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{91d2ea28-52dc-48e5-a42a-af291c7c90cb}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

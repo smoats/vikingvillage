@@ -154,10 +154,10 @@
 	</object>
 	<object class="EventMixerGroup" id="{503a382c-5240-4bbd-8d1f-ca8ae0b35540}">
 		<property name="volume">
-			<value>-14</value>
+			<value>-8.5</value>
 		</property>
 		<property name="name">
-			<value>Audio 1</value>
+			<value>sawmill</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{3821602f-31e6-4fc9-a46b-d726ebffef3a}</destination>

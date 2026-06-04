@@ -147,9 +147,6 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{1b5c2527-d4d1-4af4-8b15-197f0f4d1314}">
-		<property name="isAsync">
-			<value>true</value>
-		</property>
 		<property name="length">
 			<value>102</value>
 		</property>
@@ -471,7 +468,7 @@
 			<value>0.42999999999999999</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-39.9999542</value>
 		</property>
 		<property name="curveShape">
 			<value>0.377261728</value>
@@ -482,7 +479,7 @@
 			<value>0.85622710622710618</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-12</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{79a4cdf3-b0a3-4709-954c-b01da74f4f3f}">
@@ -490,7 +487,7 @@
 			<value>0.66000000000000003</value>
 		</property>
 		<property name="value">
-			<value>-20</value>
+			<value>-39.9999542</value>
 		</property>
 	</object>
 </objects>
