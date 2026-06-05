@@ -160,7 +160,7 @@
 			<value>-21</value>
 		</property>
 		<property name="name">
-			<value>Audio 1</value>
+			<value>grass</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{089f8628-3cc4-479f-8eb0-5a24f456e0a4}</destination>

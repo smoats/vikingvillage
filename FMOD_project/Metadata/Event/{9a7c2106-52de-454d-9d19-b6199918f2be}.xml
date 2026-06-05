@@ -146,10 +146,10 @@
 	</object>
 	<object class="SingleSound" id="{2667882c-bcb3-4a4f-ad5c-98f24a72e9b5}">
 		<property name="length">
-			<value>8.9226666666666663</value>
+			<value>7</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>2</value>
+			<value>2.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{815c696e-ea2f-4075-84ae-319318a62dfe}</destination>
@@ -157,7 +157,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{edbe5dd2-ef8d-47bf-9277-6a79f748fd0c}">
 		<property name="volume">
-			<value>-11.5</value>
+			<value>-6.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -177,7 +177,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>8.9226666666666663</value>
+			<value>7</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{c63a965e-1213-49a2-a63d-4c9df69197f4}</destination>
