@@ -153,7 +153,7 @@
 	</object>
 	<object class="EventSound" id="{fedbc020-cd93-49eb-b2d1-f9b33281d3a2}">
 		<property name="length">
-			<value>8</value>
+			<value>14</value>
 		</property>
 		<relationship name="event">
 			<destination>{972258cd-bfc7-4b5f-9491-9be7926c1e20}</destination>
@@ -186,7 +186,7 @@
 	</object>
 	<object class="EventSound" id="{0dbf7b50-f056-4804-8691-0a86a24ce0de}">
 		<property name="length">
-			<value>8</value>
+			<value>14</value>
 		</property>
 		<relationship name="event">
 			<destination>{93bd37e4-7d4e-435f-9e6d-3f4173943d93}</destination>
@@ -256,7 +256,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>8</value>
+			<value>14</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{31df4e51-34c9-4841-8a93-01fdf12485df}</destination>
