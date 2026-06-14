@@ -7,6 +7,7 @@
     {
         [Header("Audio (FMOD)")]
         public EventReference footstepEvent;
+        public EventReference clothEvent;
         public string surfaceParameterName = "fs_material";
 
         [Header("Settings")]
@@ -32,6 +33,7 @@
         [HideInInspector] public bool isGrounded;
 
         private int previousStepCount = 0;
+        private int previousClothesCount = 0;
 
         private PlayerBaseState currentState;
         private PlayerStateFactory states;
@@ -194,6 +196,24 @@
             }
         }
 
+        private void PlayCloth()
+        {
+            if (!clothEvent.IsNull)
+            {
+                // 1. Create an instance of the FMOD event
+                FMOD.Studio.EventInstance clothInstance = FMODUnity.RuntimeManager.CreateInstance(clothEvent);
+
+                // 2. Set the 3D position so it sounds like it's coming from the feet
+                clothInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(groundCheck.position));
+
+                // 4. Play the sound
+                clothInstance.start();
+
+                // 5. CRUCIAL: Release the instance so it gets destroyed from memory after it finishes playing
+                clothInstance.release();
+            }
+        }
+
         public void UpdateVisuals()
         {
             if (!useFovKick)
@@ -210,11 +230,17 @@
                 bobTimer += Time.deltaTime * currentBobSpeed;
 
                 int currentStepCount = Mathf.FloorToInt(bobTimer / (Mathf.PI * 2f));
-
                 if (currentStepCount > previousStepCount)
                 {
                     PlayFootstep();
                     previousStepCount = currentStepCount;
+                }
+
+                int currentClothesCount = Mathf.FloorToInt((bobTimer + Mathf.PI) / (Mathf.PI * 2f));
+                if (currentClothesCount > previousClothesCount)
+                {
+                    PlayCloth();
+                    previousClothesCount = currentClothesCount;
                 }
 
                 float bobOffset = Mathf.Sin(bobTimer) * currentBobIntensity;
@@ -224,6 +250,7 @@
             {
                 bobTimer = 0;
                 previousStepCount = 0;
+                previousClothesCount = 0; 
                 cameraParent.localPosition = new Vector3(cameraParent.localPosition.x, newY, cameraParent.localPosition.z);
             }
         }

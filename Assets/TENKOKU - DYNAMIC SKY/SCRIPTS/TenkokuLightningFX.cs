@@ -484,25 +484,26 @@ namespace Tenkoku.Core
                 StudioEventEmitter fmodEmitter = emitterObject.GetComponent<StudioEventEmitter>();
                 if (fmodEmitter != null)
                 {
-                    // Bezpieczne zatrzymanie poprzedniego dźwięku w puli
-                    fmodEmitter.Stop();
 
-                    // Podmiana na nowo wylosowany event
+                    //fmodEmitter.Stop();
+                    fmodEmitter.Play();
+
+
                     fmodEmitter.EventReference = fmodEvent;
 
-                    float globalVol = volEnable * tenkokuModule.volumeThunder;
-                    float finalVolume = localVolume * 1.4f * globalVol;
+                    //float globalVol = volEnable * tenkokuModule.volumeThunder;
+                    //float finalVolume = localVolume * 1.4f * globalVol;
 
-                    if (finalVolume > 0f)
-                    {
-                        fmodEmitter.Play();
+                    //if (finalVolume > 0f)
+                    //{ ,t 
+                    //    fmodEmitter.Play();
 
-                        //if (fmodEmitter.EventInstance.isValid())
-                        //{
-                            //fmodEmitter.EventInstance.setVolume(finalVolume);
-                            //fmodEmitter.EventInstance.setPitch(pitch);
-                        //}
-                    }
+                    //    //if (fmodEmitter.EventInstance.isValid())
+                    //    //{
+                    //    //fmodEmitter.EventInstance.setVolume(finalVolume);
+                    //    //fmodEmitter.EventInstance.setPitch(pitch);
+                    //    //}
+                    //}
                 }
             }
         }

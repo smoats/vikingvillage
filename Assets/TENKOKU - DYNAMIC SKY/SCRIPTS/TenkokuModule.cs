@@ -1,13 +1,14 @@
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using FMODUnity;
+using UnityEngine.InputSystem;
 
 #if UNITY_EDITOR
-	using UnityEditor;
+using UnityEditor;
 #endif
 
 
@@ -25,8 +26,23 @@ namespace Tenkoku.Core
 
 		public float currentTimeFMOD;
 
-	//PUBLIC VARIABLES
-	public string tenkokuVersionNumber = "";
+		//public XboxControllerManager xboxControllerManager;
+		//public float incrementDeltaFromController;
+
+		[Header("--- KONTROLER XBOX ---")]
+		[Tooltip("Maksymalna prędkość przewijania czasu triggerami")]
+		public float maxClockIncrement = 10000000f;
+
+		[Tooltip("Wartości GODZIN dla krzyżaka (lewo/prawo)")]
+		public List<int> clockHourPresets = new List<int> { 6, 14, 22 };
+		private int currentClockPresetIndex = 0;
+
+		[Tooltip("Wartości DESZCZU (weather_RainAmt) dla krzyżaka (góra/dół)")]
+		public List<float> rainPresets = new List<float> { 0f, 0.33f, 0.66f, 1f };
+		private int currentRainPresetIndex = 0;
+
+		//PUBLIC VARIABLES
+		public string tenkokuVersionNumber = "";
 
 	public bool useAutoFX = true;
 	public float systemTime = 1f;
@@ -781,6 +797,7 @@ bool totalEclipse = false;
 		#endif
 
 
+
 		//Set Project Layers data
 		if (Application.isPlaying){
 			tenLayerMasks.Clear();
@@ -790,9 +807,10 @@ bool totalEclipse = false;
 			}
 		}
 
+			
 
-		//FORCE SHADER INIT (Oskar-Elek)
-		Shader shader = Shader.Find("TENKOKU/Tenkoku_sky_elek_Scatter");
+			//FORCE SHADER INIT (Oskar-Elek)
+			Shader shader = Shader.Find("TENKOKU/Tenkoku_sky_elek_Scatter");
         _material = new Material(shader);
 
 	        _material.SetFloat("_AtmosphereHeight", AtmosphereHeight);
@@ -1027,17 +1045,22 @@ bool totalEclipse = false;
 
 	void LateUpdate () {
 
-			//if (Application.isPlaying){
+			if (Application.isPlaying)
+			{
+				Gamepad gamepad = Gamepad.current;
+				if (gamepad != null)
+				{
+					HandleXboxInput(gamepad);
+				}
 
-			float minuteNormalized = currentMinute / 60f;
-			//Debug.Log(useSecond);
-			//Debug.Log(minuteNormalized);
-			currentTimeFMOD = useHour + minuteNormalized;
+				// FMOD Update
+				float minuteNormalized = currentMinute / 60f;
+				currentTimeFMOD = useHour + minuteNormalized;
+				UpdateFMODParameters(currentTimeFMOD, weather_RainAmt);
+			}
 
-			UpdateFMODParameters(currentTimeFMOD, weather_RainAmt);
-
-		//SET VERSION NUMBER
-		tenkokuVersionNumber = "1.2.2";
+			//SET VERSION NUMBER
+			tenkokuVersionNumber = "1.2.2";
 
 
 		//UPDATE RANDOM NUMBER SETTING
@@ -3097,12 +3120,77 @@ if (float.IsNaN(eclipseFactor)) eclipseFactor = 1f;
 
 	}
 
+		private void HandleXboxInput(Gamepad gamepad)
+		{
+			// 1. Right Bumper - Włącz/Wyłącz automatyczny upływ czasu (enableAutoAdvance)
+			if (gamepad.rightShoulder.wasPressedThisFrame)
+			{
+				enableAutoAdvance = !enableAutoAdvance;
+				Debug.Log($"Tenkoku Auto Advance: {enableAutoAdvance}");
+			}
+
+			// 2. Triggery - Przewijanie czasu w przód i w tył
+			float leftTrigger = gamepad.leftTrigger.ReadValue();
+			float rightTrigger = gamepad.rightTrigger.ReadValue();
+
+			if (leftTrigger > 0 || rightTrigger > 0)
+			{
+				// Przekazujemy przelicznik do natywnej zmiennej Tenkoku (countSecond).
+				// Tenkoku w tle automatycznie przeliczy nadwyżkę na minuty, godziny i dni!
+				float timeDelta = (rightTrigger - leftTrigger) * maxClockIncrement * Time.deltaTime;
+				countSecond += timeDelta;
+			}
+
+			// 3. Krzyżak Lewo/Prawo - Skoki po zdefiniowanych godzinach
+			if (clockHourPresets.Count > 0)
+			{
+				if (gamepad.dpad.left.wasPressedThisFrame) CycleClockPreset(-1);
+				else if (gamepad.dpad.right.wasPressedThisFrame) CycleClockPreset(1);
+			}
+
+			// 4. Krzyżak Góra/Dół - Skoki wartości deszczu (weather_RainAmt)
+			if (rainPresets.Count > 0)
+			{
+				if (gamepad.dpad.up.wasPressedThisFrame) CycleRainPreset(1);
+				else if (gamepad.dpad.down.wasPressedThisFrame) CycleRainPreset(-1);
+			}
+		}
+
+		private void CycleClockPreset(int direction)
+		{
+			currentClockPresetIndex += direction;
+			if (currentClockPresetIndex < 0) currentClockPresetIndex = clockHourPresets.Count - 1;
+			else if (currentClockPresetIndex >= clockHourPresets.Count) currentClockPresetIndex = 0;
+
+			currentHour = Mathf.Clamp(clockHourPresets[currentClockPresetIndex], 0, 24);
+			currentMinute = 0; // Zerujemy minuty i sekundy, aby godzina "równo" wybiła
+			currentSecond = 0;
+			Debug.Log($"Godzina ustawiona na preset: {currentHour}:00");
+		}
+
+		private void CycleRainPreset(int direction)
+		{
+			currentRainPresetIndex += direction;
+			if (currentRainPresetIndex < 0) currentRainPresetIndex = rainPresets.Count - 1;
+			else if (currentRainPresetIndex >= rainPresets.Count) currentRainPresetIndex = 0;
+
+			// UWAGA: Wymuszamy tryb "Custom" (0) dla pogody. 
+			// Gdybyśmy tego nie zrobili, a Tenkoku byłoby ustawione na "Random", 
+			// od razu nadpisałoby z powrotem naszą zmianę deszczu swoim losowaniem.
+			weatherTypeIndex = 0;
+			currentWeatherTypeIndex = 0;
+
+			weather_RainAmt = Mathf.Clamp01(rainPresets[currentRainPresetIndex]);
+			weather_OvercastAmt = Mathf.Clamp01(rainPresets[currentRainPresetIndex]);
+			weather_lightning = Mathf.Clamp01(rainPresets[currentRainPresetIndex]);
+			weather_forceUpdate = true; // Wymuszamy odświeżenie particle systems u Tenkoku
+
+			Debug.Log($"Deszcz (weather_RainAmt) ustawiony na: {weather_RainAmt}");
+		}
 
 
 
-
-
-	void CalculateWeatherRandom(){
+		void CalculateWeatherRandom(){
 
 		//calculate weather pattern timer and initialize update
 		doWeatherUpdate = false;

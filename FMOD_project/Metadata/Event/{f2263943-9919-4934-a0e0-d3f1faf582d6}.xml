@@ -66,7 +66,7 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{a26879ac-9d8b-4a22-979c-fd910cc86cc8}">
 		<property name="maxVoices">
-			<value>2</value>
+			<value>6</value>
 		</property>
 		<property name="voiceStealing">
 			<value>2</value>
@@ -371,6 +371,8 @@
 		<relationship name="automationPoints">
 			<destination>{2c0b28da-3185-4d5e-8584-17e2ac45303a}</destination>
 			<destination>{9f673e5a-0f79-4dbb-89b6-01ec15baeda3}</destination>
+			<destination>{314fe0ed-2d07-47c8-b8bf-ec2c97f22988}</destination>
+			<destination>{ba36073e-58e8-4a15-8893-1c56bcd0e03e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{c26a1157-11ee-4cc5-a360-eae3963a3591}" />
@@ -413,6 +415,25 @@
 		</property>
 		<property name="value">
 			<value>-78.1614151</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{314fe0ed-2d07-47c8-b8bf-ec2c97f22988}">
+		<property name="position">
+			<value>0.04926108374384236</value>
+		</property>
+		<property name="value">
+			<value>0.275791168</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{ba36073e-58e8-4a15-8893-1c56bcd0e03e}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+		<property name="curveShape">
+			<value>1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9c1e6614-3217-4e9d-bc6b-c324db72d672}">

@@ -53968,7 +53968,7 @@ MonoBehaviour:
       Data2: 1316940976
       Data3: 2094078337
       Data4: 2095893312
-    Path: event:/MUSIC/MUS_main
+    Path: event:/MUSIC/MUS_Default
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
