@@ -183,6 +183,9 @@
 		<property name="length">
 			<value>18</value>
 		</property>
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{6cbba209-6d91-4baa-b27f-fb796454f48b}</destination>
 			<destination>{46d4ff01-1239-498b-a92b-2677b3e88c85}</destination>
@@ -240,6 +243,9 @@
 	<object class="MultiSound" id="{55350294-304e-4d90-9a69-42aa1bb11d86}">
 		<property name="length">
 			<value>18</value>
+		</property>
+		<property name="volume">
+			<value>10</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{539967ac-b749-48d4-ac05-ae032598dfac}</destination>
@@ -337,16 +343,25 @@
 		</property>
 	</object>
 	<object class="SingleSound" id="{04c376b6-0ebd-4b96-bee4-f1b87b3f3c6a}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{6483829f-fc69-4477-ae20-6ee2473556de}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{e59b2978-50aa-4d29-ad5e-a689aaf111e4}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{2e282e2d-a6d6-4c13-9670-29cc62731d1d}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{e9771c0a-903b-4d44-950e-cd1d4f3be13a}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{66450274-3eb2-4187-a8cc-fcb6929c2bf3}</destination>
 		</relationship>
@@ -420,7 +435,7 @@
 	</object>
 	<object class="SingleSound" id="{046202c8-18a0-4e91-b19b-d21bdcc1abdb}">
 		<property name="volume">
-			<value>-13</value>
+			<value>-0.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{03573074-5361-4454-bc73-af6aeb686df5}</destination>
@@ -428,7 +443,7 @@
 	</object>
 	<object class="SingleSound" id="{840e2260-72fd-47ba-ba43-2985eab0049a}">
 		<property name="volume">
-			<value>-18</value>
+			<value>10</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{4ca5adb2-e15a-494a-8ec4-450807b60cd6}</destination>

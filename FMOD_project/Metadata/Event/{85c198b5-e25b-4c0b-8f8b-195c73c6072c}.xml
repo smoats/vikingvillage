@@ -201,6 +201,9 @@
 		<property name="length">
 			<value>24</value>
 		</property>
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -261,6 +264,9 @@
 		<property name="length">
 			<value>24</value>
 		</property>
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{70dd61ad-5754-43c3-97c7-1a7d3bba18c6}</destination>
 			<destination>{2f09f40a-1bb8-4544-a184-1561b8507dbe}</destination>
@@ -316,6 +322,9 @@
 		</property>
 		<property name="length">
 			<value>24</value>
+		</property>
+		<property name="volume">
+			<value>10</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{4b586a86-bda3-46bf-8e03-3ea9a86e18b2}</destination>

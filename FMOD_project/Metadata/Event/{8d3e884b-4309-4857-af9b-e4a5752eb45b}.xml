@@ -195,6 +195,9 @@
 		<property name="timelockedOffset">
 			<value>2</value>
 		</property>
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{4afc8ddf-91d3-4ec8-84fa-9a6937e1afe3}</destination>
 		</relationship>
@@ -230,6 +233,9 @@
 	<object class="SingleSound" id="{099f5f18-061c-43c7-8ed6-9513219ee2e2}">
 		<property name="length">
 			<value>48</value>
+		</property>
+		<property name="volume">
+			<value>10</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{47fdeea1-ca61-4f7d-8912-f32a3d5dd04f}</destination>
@@ -269,6 +275,9 @@
 		</property>
 		<property name="timelockedOffset">
 			<value>2</value>
+		</property>
+		<property name="volume">
+			<value>8</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{ada261d9-37d8-4dea-8fde-a745f4e4cf2b}</destination>

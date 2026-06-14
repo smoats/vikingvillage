@@ -4,6 +4,9 @@
 		<property name="color">
 			<value>Purple</value>
 		</property>
+		<property name="volume">
+			<value>-2.5</value>
+		</property>
 		<property name="name">
 			<value>PLAYER</value>
 		</property>

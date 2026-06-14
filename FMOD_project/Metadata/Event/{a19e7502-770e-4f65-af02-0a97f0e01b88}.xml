@@ -133,6 +133,9 @@
 		<property name="length">
 			<value>9.0999999999999996</value>
 		</property>
+		<property name="volume">
+			<value>3</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -294,7 +297,7 @@
 			<value>20.998357963875208</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>6.50000381</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{79180233-d9a7-4791-81d9-a273720c5066}">
@@ -302,7 +305,7 @@
 			<value>20.998337130541874</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-48.75</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{a1953589-cbab-4daf-a993-945ac4eac850}">
@@ -310,7 +313,7 @@
 			<value>6</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>6.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{38813b68-6078-47e1-b3be-a98beb98264f}">
@@ -318,7 +321,7 @@
 			<value>6.0000208333333331</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-48.75</value>
 		</property>
 	</object>
 </objects>
