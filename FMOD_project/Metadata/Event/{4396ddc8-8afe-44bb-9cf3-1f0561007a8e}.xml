@@ -156,9 +156,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{11949b3f-a1f1-4ef6-9f1c-d2d9e9f1d765}">
-		<property name="volume">
-			<value>-21</value>
-		</property>
 		<property name="name">
 			<value>grass</value>
 		</property>

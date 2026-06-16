@@ -124,7 +124,7 @@
 			<value>38</value>
 		</property>
 		<property name="volume">
-			<value>9</value>
+			<value>10</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
@@ -160,7 +160,7 @@
 			<value>38</value>
 		</property>
 		<property name="volume">
-			<value>5</value>
+			<value>10</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{8535a8d8-7a20-472b-b7ac-150ec9a6434e}</destination>
@@ -216,9 +216,6 @@
 	<object class="RandomizerModulator" id="{f6b32020-ed4e-4cb9-877e-2dd799bda2ea}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
-		</property>
-		<property name="amount">
-			<value>12.5</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{ff50e3e2-ae98-46d5-8a28-30a589d8543f}">

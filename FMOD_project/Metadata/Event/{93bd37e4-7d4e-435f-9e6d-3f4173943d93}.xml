@@ -123,6 +123,9 @@
 		<property name="length">
 			<value>14</value>
 		</property>
+		<property name="volume">
+			<value>4</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -161,6 +164,9 @@
 		<property name="length">
 			<value>14</value>
 		</property>
+		<property name="volume">
+			<value>5.5</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{0218782a-d65d-47d9-b557-0a47d6f2340a}</destination>
 			<destination>{00ca0658-8ed9-4a50-9ece-a69a49f064aa}</destination>
@@ -195,6 +201,9 @@
 	<object class="MultiSound" id="{bb8f4f66-bab7-43a1-b1b2-4f3293757e47}">
 		<property name="length">
 			<value>14</value>
+		</property>
+		<property name="volume">
+			<value>4</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{7a46eafb-3092-4d14-a2db-549a0a0c9276}</destination>
