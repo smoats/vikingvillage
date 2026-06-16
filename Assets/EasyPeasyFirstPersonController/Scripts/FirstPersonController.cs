@@ -164,6 +164,12 @@
                     case "Dirt":
                         Debug.Log("Dirt");
                         return 3;
+                    case "Stone":
+                        Debug.Log("Stone");
+                        return 4;
+                    case "Wood_Hollow":
+                        Debug.Log("Wood Hollow");
+                        return 5;
 
                     default:
                         Debug.Log("Wood");

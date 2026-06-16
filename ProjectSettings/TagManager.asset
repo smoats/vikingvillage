@@ -8,6 +8,8 @@ TagManager:
   - Dirt
   - Mud
   - High Grass
+  - Wood_Hollow
+  - Stone
   layers:
   - Default
   - TransparentFX
