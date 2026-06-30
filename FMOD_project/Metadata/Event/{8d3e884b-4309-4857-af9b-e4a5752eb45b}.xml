@@ -125,9 +125,6 @@
 		<relationship name="automationTracks">
 			<destination>{ba329577-6565-458c-bd7e-043805f60bd6}</destination>
 		</relationship>
-		<relationship name="modules">
-			<destination>{988ca5f4-ee96-4be5-ae0b-496639a2c30d}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a5435c72-0385-4438-942f-1b5876caf96d}</destination>
 		</relationship>
@@ -145,7 +142,6 @@
 	</object>
 	<object class="Timeline" id="{54e1e656-a8ba-4321-906a-ab0d30c214b8}">
 		<relationship name="modules">
-			<destination>{988ca5f4-ee96-4be5-ae0b-496639a2c30d}</destination>
 			<destination>{501d5d1a-b249-4f86-86a1-623fafdc7a76}</destination>
 			<destination>{163b45a9-6c84-41f7-b6aa-301e6c52f334}</destination>
 			<destination>{099f5f18-061c-43c7-8ed6-9513219ee2e2}</destination>
@@ -351,14 +347,6 @@
 	<object class="AutomationTrack" id="{ba329577-6565-458c-bd7e-043805f60bd6}">
 		<relationship name="automator">
 			<destination>{4ec90b94-7678-47f8-96fd-a03a99e652a5}</destination>
-		</relationship>
-	</object>
-	<object class="EventSound" id="{988ca5f4-ee96-4be5-ae0b-496639a2c30d}">
-		<property name="length">
-			<value>48</value>
-		</property>
-		<relationship name="event">
-			<destination>{a816bb3d-bad6-4e3f-ac44-8988248616bd}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{a5435c72-0385-4438-942f-1b5876caf96d}">
